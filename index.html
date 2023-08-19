@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <script src="Atividade10.js"></script>
+</head>
+<body>
+    <!----------------
+    
+    
+    alert("Codigo 1")
+
+function multiplicarNumeros(numero1, numero2) {
+    return numero1 * numero2;
+}
+
+var num1 = parseInt(prompt("Digite o primeiro número inteiro:"));
+var num2 = parseInt(prompt("Digite o segundo número inteiro:"));
+
+
+var resultado = multiplicarNumeros(num1, num2);
+alert("A multiplicação dos números é: " + resultado);
+
+alert("Codigo 2")
+
+function calcularPotencia(base, expoente) {
+    var resultado = 1;
+
+    for (var i = 0; i < expoente; i++) {
+        resultado *= base;
+    }
+
+    return resultado;
+}
+
+var base = parseFloat(prompt("Digite a base:"));
+var expoente = parseInt(prompt("Digite o expoente (deve ser um número inteiro):"));
+
+var potencia = calcularPotencia(base, expoente);
+alert("O resultado da potência é: " + potencia);
+    
+alert("Codigo 3")
+alert("Ativ.07 Refeita com Funçoes")
+
+function calcularIdade(anoNascimento) {
+    var anoAtual = new Date().getFullYear();
+    return anoAtual - anoNascimento;
+  }
+  
+  var nome = prompt("Escreva seu nome");
+  var dataNascimento = parseInt(prompt("Escreva sua data de nascimento"));
+  
+  var idade = calcularIdade(dataNascimento);
+  
+  alert("Seu nome é " + nome + " e você tem " + idade + " anos.");
+    
+  
+alert("Ativ.08 Refeita com Funçoes")
+
+function calcularValorCompra() {
+    let saldoInicial = parseFloat(prompt("Digite seu saldo"));
+    let valorDaCompra = parseFloat(prompt("Digite o Valor da Compra"));
+    let saldoRestante = saldoInicial - valorDaCompra;
+  
+    if (saldoInicial < valorDaCompra) {
+      alert("Seu Saldo é insuficiente para realizar essa compra.");
+    } else {
+      alert("A compra foi realizada com sucesso, seu saldo restante é de " + saldoRestante + " reais.");
+    }
+  }
+  
+  function calcularOperacao() {
+    let numero1 = parseInt(prompt("Insira o valor do primeiro número"));
+    let numero2 = parseInt(prompt("Insira o valor do segundo número"));
+    let operador = prompt("Insira o operador: +, -, *, /");
+    let resultado;
+  
+    if (operador === "+") {
+      resultado = numero1 + numero2;
+    } else if (operador === "-") {
+      resultado = numero1 - numero2;
+    } else if (operador === "*") {
+      resultado = numero1 * numero2;
+    } else if (operador === "/") {
+      resultado = numero1 / numero2;
+    }
+  
+    alert("O resultado é " + resultado);
+  }
+  
+  function reajustarSalario() {
+    let salario = parseFloat(prompt("Insira seu salário atual"));
+    let vinte = 20;
+    let quinze = 15;
+    let dez = 10;
+    let cinco = 5;
+    let salarioFinal;
+  
+    if (salario < 280) {
+      salarioFinal = salario + (salario * (vinte / 100));
+      alert("Seu salário de R$" + salario + " foi reajustado, o aumento foi de 20%, seu salário atual é de R$" + salarioFinal);
+    } else if (salario < 700) {
+      salarioFinal = salario + (salario * (quinze / 100));
+      alert("Seu salário de R$" + salario + " foi reajustado, o aumento foi de 15%, seu salário atual é de R$" + salarioFinal);
+    } else if (salario < 1500) {
+      salarioFinal = salario + (salario * (dez / 100));
+      alert("Seu salário de R$" + salario + " foi reajustado, o aumento foi de 10%, seu salário atual é de R$" + salarioFinal);
+    } else {
+      salarioFinal = salario + (salario * (cinco / 100));
+      alert("Seu salário de R$" + salario + " foi reajustado, o aumento foi de 5%, seu salário atual é de R$" + salarioFinal);
+    }
+  }
+  
+  function identificarTriangulo() {
+    let triangulo1 = parseFloat(prompt("Insira o valor do primeiro lado do triângulo"));
+    let triangulo2 = parseFloat(prompt("Insira o valor do segundo lado do triângulo"));
+    let triangulo3 = parseFloat(prompt("Insira o valor do terceiro lado do triângulo"));
+  
+    if (triangulo1 + triangulo2 > triangulo3 && triangulo2 + triangulo3 > triangulo1 && triangulo1 + triangulo3 > triangulo2) {
+      if (triangulo1 === triangulo2 && triangulo1 === triangulo3 && triangulo2 === triangulo3) {
+        alert("É um triângulo Equilátero");
+      } else if (triangulo1 === triangulo2 || triangulo1 === triangulo3 || triangulo2 === triangulo3) {
+        alert("É um triângulo Isósceles");
+      } else {
+        alert("É um triângulo Escaleno");
+      }
+    } else {
+      alert("Isso não é um triângulo, pois para formar um triângulo, a soma de quaisquer dois lados deve ser maior que o terceiro");
+    }
+  }
+  
+  calcularValorCompra();
+  calcularOperacao();
+  reajustarSalario();
+  identificarTriangulo();
+  
+    -->
+
+
+
+    <script src="Atividade10.js"></script>
+</body>
+</html>
